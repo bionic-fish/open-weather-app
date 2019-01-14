@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather App</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- external libaries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main-heading">
+      <h1>Weather App Tutorial<h1>
+        <h5>Completed By : C D Harris</h5>
+        
+    </div>
+    <!-- main container wrapper -->
+    <div class="container">
+    <!-- header components:
+            [header.header],
+            [div.search],
+            [input#search-text],
+            [a#search-btn]
+     -->
+        <header class="header">
+            <div class="search">
+                <input type="text" name="city" id="search-txt" placeholder="Enter City Name" autocomplete="off">
+                <a href="#" id="search-btn"><i class="fas fa-search"></i></a>
+            </div>
+        </header>
+    
+    <!-- main weather wrapper -->
+    <main id="main">
+    <!-- main components:
+            [div.city-icon],
+            [p.city__heading],
+            [div#city-name],
+             -->
+    <div class="city-icon">
+        
+        <div class="city-icon-holder">
+                <p class="city__heading">City :</p>   
+            <div id="city-name"></div>
+            
+            <img src="theresponse()" alt="" id="icon">
+        </div>
+    </div>
+
+    <div class="temperature">
+        <p class="city__heading">temperature :</p>
+        <div id="temp"></div>
+    </div>
+
+    <div class="humidity">
+        <p class="city__heading">Humidity :</p>
+        <div id="humidity-div"></div>
+    </div>
+
+    </main>
+
+    <!-- [div .container] ends here-->
+    </div>
+    
+    <!-- footer -->
+    <footer class="footer">
+        <div class="flex-links">
+            <a href="">Portfolio</a>
+            <a href="../index.html">Projects</a>
+            <a href="https://github.com/bionic-fish">Github</a>
+        </div>
+        
+        <h5>Page Developed By : C D H</h5>
+        <h5>API + JSON source material from : <a href="https://openweathermap.org/">OpenWeatherMap</a></h5>
+    </footer>
+    
+    <!-- external directory scripts -->
+    <script src="js/app.js"></script>
+
+    <!-- external script libs -->
+    <script src='https://use.fontawesome.com/releases/v5.0.13/js/all.js'></script>
+
+</body>
+</html>
