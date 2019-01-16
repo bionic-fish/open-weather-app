@@ -10,12 +10,27 @@
     <!-- external libaries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gruppo" rel="stylesheet">
+
 
 </head>
 <body>
+    <div id="topbar">
+            <span class="topbar__left">
+                <h2>Interactive JS Projects</h2>
+                <h4>By C D Harris.</h4>
+            </span>
+    
+            <span class="topbar__right">
+                <a href="https://bionic-fish.github.io/">portfolio</a>
+                <a href="https://bionic-fish.github.io/js-interactive/">projects</a>
+                <a href="https://github.com/bionic-fish">github</a>    
+            </span>
+        </div>
+
     <div class="main-heading">
-      <h1>Weather App Tutorial<h1>
-        <h5>Completed By : C D Harris</h5>
+      <h1>Weather App<h1>
+        <h5>OpenWeatherMap API</h5>
         
     </div>
     <!-- main container wrapper -->
@@ -64,17 +79,23 @@
 
     <!-- [div .container] ends here-->
     </div>
+        
+    <section>
+        <div class="container section_container">
+            <h3>About</h3>
+            <p>Developing this web based weather application, I came into contact with my first ever API.
+                This process enhanced my JavaScript skills by creating an app that sends a Http request, which 
+                creates a request to the API for specific JSON data attaining to the users input elements. Following
+                the OpenWeatherMap.org documentation I was able to create a working weather application. This has
+                intrigued my interest into more logic based applications utilizing JavaScript. 
+            </p>
+        </div>
+    </section>
     
     <!-- footer -->
-    <footer class="footer">
-        <div class="flex-links">
-            <a href="">Portfolio</a>
-            <a href="../index.html">Projects</a>
-            <a href="https://github.com/bionic-fish">Github</a>
-        </div>
-        
+    <footer id="footer">
         <h5>Page Developed By : C D H</h5>
-        <h5>API + JSON source material from : <a href="https://openweathermap.org/">OpenWeatherMap</a></h5>
+        <h6>API + JSON source material from : <a href="https://openweathermap.org/">OpenWeatherMap</a></h6>
     </footer>
     
     <!-- external directory scripts -->

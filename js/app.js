@@ -7,7 +7,9 @@ let icon = document.getElementById("icon");
 let temperature = document.getElementById("temp");
 let humidity = document.getElementById("humidity-div");
 
+// add event listeners to button
 searchButton.addEventListener("click", findWeatherDetails);
+// provide keyboard functionality for search input field
 searchInput.addEventListener("keyup", enterPressed);
 
 function enterPressed(event) {
@@ -15,7 +17,6 @@ function enterPressed(event) {
         findWeatherDetails();
     }   
 }
-
 function findWeatherDetails() {
     if (searchInput.value === "") {
 
@@ -35,7 +36,7 @@ function theResponse(response) {
 
 function httpRequestAsync(url, callback) 
 {
-    console.log("hello");
+    console.log("the response works!");
         var httpRequest = new XMLHttpRequest();
         httpRequest.onreadystatechange = () => {
             if (httpRequest.readyState == 4 && httpRequest.status == 200)
@@ -43,4 +44,4 @@ function httpRequestAsync(url, callback)
     }
     httpRequest.open("GET", url, true); // true for async
     httpRequest.send();
-}     
+}

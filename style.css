@@ -1,24 +1,54 @@
 body{
   background-color: #eee;
-  background-image: url(img/weather-bkg.jpg);
+  background: #333;
+  opacity: 0.9;
   background-repeat: no-repeat;
   background-size: cover;
 }
-  
-.main-heading,
-.footer {
+/* JS Interactive Header + Footer Props */
+
+.topbar__left {
+  float: left;
+}
+.topbar__right {
+  float: right;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+#topbar, 
+#footer {
+    font-family: 'Gruppo', cursive;
+    height: 80px;
+    background-color: rgba(36, 124, 206, 0.5) !important;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    
+}
+#topbar a {
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+.main-heading {
   text-align: center;
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   letter-spacing: 2px;
-  color: rgb(84, 218, 102);
-  text-shadow: 2px 2px darkcyan;
+  color: #fff;
+  text-shadow: 4px 2px rgba(36, 124, 206, 0.5);
   font-size: 1.3em;
 }
 
 .container{
   width: 500px;
   height: 300px;
-  margin:5vh auto;
+  margin:5px auto;
+  margin-bottom: 50px;
   border-radius: 25px;
   box-shadow: 0 20px 40px 0px rgba(0,0,0,0.3);
   /* position: absolute; */
@@ -34,9 +64,9 @@ body{
 }
   
 #temp, #humidity-div {
-  font-family: "Courier New";
+  
   font-weight: bold;
-  font-size: 60px;
+  font-size: 30px;
   color: #fff;
   position: absolute;
   left: 50%;
@@ -55,7 +85,7 @@ body{
 }
   
 #city-name {
-  font-family: "Courier New";
+  
   font-size: 20px;
   font-weight: bold;
   color: #fff;
@@ -67,32 +97,32 @@ body{
   font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
-#icon {
-  width:50%;
-}
+
   
 #main{
   width: 100%;
   height: 100%;
   position: relative;
 }
-  
+#icon {
+  width:50%;
+}  
 .city-icon {
   height: 80%;
   width: 50%;
   border-bottom-left-radius: 25px;
-  background-color: rgb(29, 178, 216);
+  background-color: rgba(224, 119, 21, 0.7);
 }
   
-  .temperature {
+.temperature {
   position: absolute;
   left: 50%;
   top:0%;
   height: 40%;
   width: 50%;
-  background-color: rgb(211, 115, 25);
-}
+  background-color: rgba(163, 32, 175, 0.7);
   
+}
 .humidity {
   height: 40%;
   width: 50%;
@@ -100,17 +130,17 @@ body{
   left:50%;
   top:40%;
   border-bottom-right-radius: 25px;
-  background-color: rgb(170, 100, 170);
+  background-color: rgba(238, 42, 16, 0.7);
 }
   
 #search-btn {
   width: 40px;
   height:40px;
   color: #eee;
+  padding-left: 10px;
 }
-  
 #search-txt {
-  color: red;
+  color: rgb(84, 218, 102);
   height:30px;
   border-radius: 10px;
   border-style:none;
@@ -119,49 +149,44 @@ body{
   padding-left:1px;
   text-align:center;
 }
-  
-  .search {
-    position: absolute;
-    left: 50%;
-    top:50%;
-    -webkit-transform:translate(-50%,-50%);
-            transform:translate(-50%,-50%);
-  }
-
-
-
-.footer {
-  position: relative;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
+.search {
+  position: absolute;
+  left: 50%;
+  top:50%;
+  -webkit-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%);
 }
-.flex-links {
+
+/* about section */
+.section_container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(36, 124, 206, 0.5);
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  color: #fff;
+ 
 }
-.flex-links a {
-  margin: auto;
-  color: rgb(84, 218, 102);
-  transition: all 1s ease-out;
-  text-decoration: none;
-}
-.flex-links a:hover {
-  margin: auto;
-  
-  transform: scale(1.1);
-  border-bottom: 4px solid rgb(84, 218, 102);
-  
-} 
 
 @media screen and (max-width: 900px) {
   .container{
     width: 100%;
-    height: 300px;
-    
     border-radius: 25px;
     box-shadow: 0 20px 40px 0px rgba(0,0,0,0.3);
+    margin-bottom: 50px;
     /* position: absolute; */
   }
+  #topbar {
+    height: fit-content;
+  }
+  #footer {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+  .topbar__right,
+  .topbar__left {float: none;}
 }
